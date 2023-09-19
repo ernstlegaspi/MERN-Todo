@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true, limit: '30mb' }))
 
 const PORT = process.env.PORT || 2217
 
-app.use('/try', routes)
+app.use('/auth', routes)
 
 mongoose.connect(process.env.DB_URL, { useUnifiedTopology: true, useNewUrlParser: true })
 	.then(() => app.listen(PORT, () => console.log(`Server is running in port: ${PORT}`)))
